@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="utf-8">
+    <script src="index.js"></script>
+
+<style>
+    
+    img {
+  width: 1000px;
+  
+        margin-left: 600px;
+}
+
+.clip-svg {
+  clip-path: url(#myClip);
+}
+
+body {
+  background: linear-gradient(
+    #B0F2FE,
+    white
+  );
+}
+
+body, html {
+  height: 100%;
+}
+    
+    
+    
+    span {
+    display: inline-block;
+    font-family: futura-pt, 'Helvetica Neue', sans-serif;
+    font-size: 2.5em;
+    font-weight: 300;
+    margin: 1px;
+}
+
+.arced {
+    display: block;
+    text-shadow: rgba(0, 0, 0, 0.298039) 8px 8px;
+    text-align: center;
+   color: darkred;
+    padding: 50px 0 50px;
+}
+
+div span {
+    text-shadow: rgba(0, 0, 0, 0.298039) 8px 8px;
+    font-family: futura-pt, 'Helvetica Neue', sans-serif;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.arced > span:nth-child(1) {
+    -webkit-transform:translateX(-100px) translateY(200px) rotate(-30deg);
+    -webkit-transition:0s;
+}
+    
+    .arced > span:nth-child(2) {
+    -webkit-transform:translateX(-50px) translateY(150px) rotate(-15deg);
+    -webkit-transition:0s;
+}
+    .arced > span:nth-child(3) {
+    -webkit-transform:translateX(0px) translateY(130px) rotate(-0deg);
+    -webkit-transition:0s;
+}
+    .arced > span:nth-child(4) {
+    -webkit-transform:translateX(50px) translateY(150px) rotate(15deg);
+    -webkit-transition:0s;
+}
+     .arced > span:nth-child(5) {
+    -webkit-transform:translateX(100px) translateY(200px) rotate(30deg);
+    -webkit-transition:0s;
+}
+    
+    
+    
+    
+
+    </style>
+
+
+<body>
+ <span class="arced">
+        <span class="char1">C</span>
+        <span class="char2">U</span>
+        <span class="char3">R</span>
+        <span class="char4">V</span>
+        <span class="char5">E</span>
+</span>
+    
+
+<img src="imgs/Capture.PNG" alt="" class="clip-svg">
+
+<svg width="0" height="0">
+  <defs>
+    <clipPath id="myClip">
+      <circle cx="500" cy="620" r="500"/>
+  
+    </clipPath>
+  </defs>
+</svg>
+    
+    
+       
+    
+    
+</body>
+    
+    
+</html>

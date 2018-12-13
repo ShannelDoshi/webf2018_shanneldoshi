@@ -1,128 +1,26 @@
-function myFunction() 
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 80,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#000"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "imgs/background.png",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.5,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 6,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-});
-var update;
-stats = new Stats;
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
-count_particles = document.querySelector('.js-count-particles');
-update = function() {
-  stats.begin();
-  stats.end();
-  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-  }
-  requestAnimationFrame(update);
-};
-requestAnimationFrame(update);
+var quotes = [
+'Practicing gratitude for what I have will make me so much happier than obsessing over the things my life is lacking.',
+'I got to wake up to another new day today, and I should never take that for granted.',
+'I cannot control other people, but I can always control myself.',
+'Meditate, meditate, meditate.',
+'Everyone else has a backstory which is just as complicated as mine, and I should remember this when I am tempted to judge someone..',
+'Spend money on experiences.',
+'Chasing after the validation of others will always be a losing battle.',
+'I should never care if my positivity or ambition makes negative people feel uncomfortable.',
+'Even if I do not believe that everything happens for a reason, I can give meaning to any situation by finding something to learn from it.',
+'I will never please everyone, and that is okay.',
+'Integrity and character will always be more important than power and wealth.',
+'I have every right to say no if something or someone makes me feel uncomfortable or unsafe.',
+'Pain is relative; it is not a competition.',
+'Celebrate little victories.',
+'Complaining will not fix my problems, and it will not make people feel bad for me; all it will do is hold me in place.',
+'Perfection can get in the way more times than not.',
+'Forgiveness will lighten my soul, and grudges will weigh it down.']
+
+
+function newQuote() {
+    
+    var randomNumber = Math.floor(Math.random()*(quotes.length));
+document.getElementById('quoteDisplay').innerHTML=quotes[randomNumber];
+    
+}
